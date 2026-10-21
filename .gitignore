@@ -1,0 +1,10 @@
+# Legacy/duplicate class files (not referenced by the app)
+/class/
+
+# Live server credentials (never commit)
+classes/config.live.php
+
+# Runtime output
+*.log
+logs/
+*.sql
