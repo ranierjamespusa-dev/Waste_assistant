@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
 
         if ($user) {
             $stored = $user['password'];
-            $is_hashed = password_get_info($stored)['algo'] !== 0;
+            $is_hashed = password_get_info($stored)['algoName'] !== 'unknown';
 
             $valid = $is_hashed
                 ? password_verify($password, $stored)
